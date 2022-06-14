@@ -29,39 +29,42 @@ export default function App() {
     });
   }
   return (
-    <View style={styles.appContainer}>
-      <Button
-        title="Add New Goal"
-        color="#5e0acc"
-        onPress={startAddGoalHandler}
-      />
-      <GoalInput
-        visible={modalIsVisible}
-        onAddGoal={addGoalHandler}
-        onCancel={endAddGoalHandler}
-      />
-      <View style={styles.goalsContainer}>
-        {/* <ScrollView>
+    <>
+      <StatusBar style="light" />
+      <View style={styles.appContainer}>
+        <Button
+          title="Add New Goal"
+          color="#5e0acc"
+          onPress={startAddGoalHandler}
+        />
+        <GoalInput
+          visible={modalIsVisible}
+          onAddGoal={addGoalHandler}
+          onCancel={endAddGoalHandler}
+        />
+        <View style={styles.goalsContainer}>
+          {/* <ScrollView>
           {courseGoals.map((goal) => (
             <View style={styles.goalItem} key={goal}>
               <Text style={styles.goalText}>{goal}</Text>
             </View>
           ))}
         </ScrollView> */}
-        <FlatList
-          data={courseGoals}
-          renderItem={(itemData) => {
-            return (
-              <GoalItem
-                text={itemData.item.text}
-                id={itemData.item.id}
-                onDeleteItem={deleteGoalHandler}
-              />
-            );
-          }}
-        />
+          <FlatList
+            data={courseGoals}
+            renderItem={(itemData) => {
+              return (
+                <GoalItem
+                  text={itemData.item.text}
+                  id={itemData.item.id}
+                  onDeleteItem={deleteGoalHandler}
+                />
+              );
+            }}
+          />
+        </View>
       </View>
-    </View>
+    </>
   );
 }
 /* styles */

@@ -69,7 +69,10 @@ const styles = StyleSheet.create({
 
   textInput: {
     borderWidth: 1,
-    borderColor: "#cccccc",
+    borderColor: "#e4d0ff",
+    borderRadius: 8,
+    backgroundColor: "#e4d0ff",
+    color: "#120438",
     width: "100%",
     padding: 8,
   },
@@ -79,6 +82,6 @@ const styles = StyleSheet.create({
   },
   button: {
     width: 100,
-    marginHorizontal: 8,
+    marginHorizontal: 20,
   },
 });
