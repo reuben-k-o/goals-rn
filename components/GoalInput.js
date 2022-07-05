@@ -11,8 +11,8 @@ import {
 function GoalInput(props) {
   const [enteredGoalText, setEnteredGoalText] = useState("");
 
-  function goalInputHandler(enteredGoalText) {
-    setEnteredGoalText(enteredGoalText);
+  function goalInputHandler(enteredNewGoalText) {
+    setEnteredGoalText(enteredNewGoalText);
   }
 
   function addGoalHandler() {
@@ -34,7 +34,7 @@ function GoalInput(props) {
         />
         <TextInput
           style={styles.textInput}
-          placeholder="Your course goals!"
+          placeholder="Enter your goals!"
           onChangeText={goalInputHandler}
           value={enteredGoalText}
         />
